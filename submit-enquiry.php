@@ -29,8 +29,13 @@ try {
     exit;
 }
 
-if (!$delivery['internal_sent']) {
-    error_log('SAM internal enquiry email failed for enquiry ' . $enquiryId . ': ' . $delivery['internal_error']);
+if (!$delivery['customer_sent'] || !$delivery['internal_sent']) {
+    if (!$delivery['customer_sent']) {
+        error_log('SAM customer confirmation email failed for enquiry ' . $enquiryId . ': ' . $delivery['customer_error']);
+    }
+    if (!$delivery['internal_sent']) {
+        error_log('SAM internal enquiry email failed for enquiry ' . $enquiryId . ': ' . $delivery['internal_error']);
+    }
     $message = rawurlencode('Your enquiry was saved, but email delivery is delayed. Please call (888) 202-9831 if your request is urgent.');
     header('Location: ' . $redirect . '?form_status=error&form_message=' . $message . '#contact-form', true, 302);
     exit;
