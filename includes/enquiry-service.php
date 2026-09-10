@@ -131,6 +131,28 @@ function sam_base_mailer(): PHPMailer
     return $mail;
 }
 
+function sam_internal_recipients(array $config): array
+{
+    $recipients = [];
+    $candidates = [
+        [$config['site']['admin_email'] ?? '', 'SAM Recover Admin'],
+        [$config['site']['support_email'] ?? '', $config['site']['support_name'] ?? 'SAM Recover Support'],
+    ];
+
+    foreach ($candidates as [$email, $name]) {
+        $email = filter_var(trim((string) $email), FILTER_VALIDATE_EMAIL) ?: '';
+        if ($email === '') {
+            continue;
+        }
+        $key = strtolower($email);
+        if (!isset($recipients[$key])) {
+            $recipients[$key] = ['email' => $email, 'name' => (string) $name];
+        }
+    }
+
+    return array_values($recipients);
+}
+
 function sam_customer_mail_html(int $enquiryId, array $enquiry): string
 {
     $formattedId = '#' . str_pad((string) $enquiryId, 4, '0', STR_PAD_LEFT);
@@ -432,7 +454,7 @@ function sam_internal_mail_html(int $enquiryId, array $enquiry): string
 HTML;
 }
 
-function sam_send_enquiry_emails(int $enquiryId, array $enquiry): void
+function sam_send_enquiry_emails(int $enquiryId, array $enquiry): array
 {
     $pdo = sam_db();
     $customerSent = 0;
@@ -457,8 +479,13 @@ function sam_send_enquiry_emails(int $enquiryId, array $enquiry): void
     try {
         $internal = sam_base_mailer();
         $config = sam_config();
-        $internalDestination = $config['site']['admin_email'] ?? $config['site']['support_email'];
-        $internal->addAddress($internalDestination, 'SAM Recover Admin');
+        $internalRecipients = sam_internal_recipients($config);
+        if (!$internalRecipients) {
+            throw new RuntimeException('No valid internal notification recipients are configured.');
+        }
+        foreach ($internalRecipients as $recipient) {
+            $internal->addAddress($recipient['email'], $recipient['name']);
+        }
         if ($enquiry['email'] !== '') {
             $internal->addReplyTo($enquiry['email'], $enquiry['full_name']);
         } else {
@@ -487,6 +514,13 @@ function sam_send_enquiry_emails(int $enquiryId, array $enquiry): void
         ':internal_mail_error' => $internalError,
         ':id' => $enquiryId,
     ]);
+
+    return [
+        'customer_sent' => $customerSent === 1,
+        'internal_sent' => $internalSent === 1,
+        'customer_error' => $customerError,
+        'internal_error' => $internalError,
+    ];
 }
 
 function sam_fetch_enquiries(): array
