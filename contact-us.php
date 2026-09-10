@@ -1337,6 +1337,7 @@
     }
   </style>
   <link rel="icon" href="favicon-sam.png" type="image/png" />
+  <?php include __DIR__ . '/includes/google-tag.php'; ?>
 </head>
 
 <body>

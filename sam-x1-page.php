@@ -742,6 +742,7 @@
   }
 </style>
   <link rel="icon" href="favicon-sam.png" type="image/png" />
+  <?php include __DIR__ . '/includes/google-tag.php'; ?>
 </head>
 <body>
 <?php include __DIR__ . '/includes/header.php'; ?>
@@ -929,7 +930,6 @@
 <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
 
 
 
