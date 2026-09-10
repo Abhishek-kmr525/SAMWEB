@@ -157,16 +157,16 @@
       const label = escapeHtml(item.label);
       const hasChildren = Array.isArray(item.children) && item.children.length > 0;
       if (depth === 0) {
-        const itemClass = hasChildren ? "has-dropdown" : "";
+        const itemClass = hasChildren ? "shdr-has-dropdown" : "";
         const navClasses = ["nav-item"];
         const menuId = "nav-menu-" + depth + "-" + slugify(item.label);
         if (label.toUpperCase().includes("PRODUCTS")) navClasses.push("nav-products");
 
         let control = "";
         if (hasChildren && item.href) {
-          control = "<a class=\"" + navClasses.join(" ") + "\" href=\"" + escapeHtml(item.href) + "\" data-nav-toggle aria-expanded=\"false\" aria-controls=\"" + menuId + "\">" + label + " <span class=\"nav-caret\" aria-hidden=\"true\"></span></a>";
+          control = "<a class=\"" + navClasses.join(" ") + "\" href=\"" + escapeHtml(item.href) + "\" data-shdr-toggle aria-expanded=\"false\" aria-controls=\"" + menuId + "\">" + label + " <span class=\"shdr-caret\" aria-hidden=\"true\"></span></a>";
         } else if (hasChildren) {
-          control = "<button class=\"" + navClasses.join(" ") + "\" type=\"button\" data-nav-toggle aria-expanded=\"false\" aria-controls=\"" + menuId + "\">" + label + " <span class=\"nav-caret\" aria-hidden=\"true\"></span></button>";
+          control = "<button class=\"" + navClasses.join(" ") + "\" type=\"button\" data-shdr-toggle aria-expanded=\"false\" aria-controls=\"" + menuId + "\">" + label + " <span class=\"shdr-caret\" aria-hidden=\"true\"></span></button>";
         } else if (item.href !== null && item.href !== undefined) {
           control = "<a class=\"" + navClasses.join(" ") + "\" href=\"" + escapeHtml(item.href) + "\">" + label + "</a>";
         } else {
@@ -279,13 +279,13 @@
     const openItem = (li) => {
       clearTimeout(timers.get(li));
       timers.delete(li);
-      li.classList.add('is-open');
-      const control = li.querySelector('[data-nav-toggle]');
+      li.classList.add('shdr-open');
+      const control = li.querySelector('[data-shdr-toggle]');
       if (control) control.setAttribute('aria-expanded', 'true');
     };
     const closeItem = (li) => {
-      li.classList.remove('is-open');
-      const control = li.querySelector('[data-nav-toggle]');
+      li.classList.remove('shdr-open');
+      const control = li.querySelector('[data-shdr-toggle]');
       if (control) control.setAttribute('aria-expanded', 'false');
     };
     const scheduleClose = (li) => {
@@ -295,7 +295,7 @@
     };
 
     items.forEach((li) => {
-      const control = li.querySelector('[data-nav-toggle]');
+      const control = li.querySelector('[data-shdr-toggle]');
       const dropdown = li.querySelector('.dropdown');
 
       li.addEventListener('mouseenter', () => {
@@ -314,13 +314,13 @@
         control.addEventListener('click', (event) => {
           if (!mobile.matches) return;
           const isLink = control.tagName === 'A' && control.getAttribute('href');
-          const alreadyOpen = li.classList.contains('is-open');
+          const alreadyOpen = li.classList.contains('shdr-open');
           if (!alreadyOpen) {
             event.preventDefault();
           } else if (!isLink) {
             event.preventDefault();
           }
-          const open = alreadyOpen ? (isLink ? false : li.classList.toggle('is-open')) : li.classList.toggle('is-open');
+          const open = alreadyOpen ? (isLink ? false : li.classList.toggle('shdr-open')) : li.classList.toggle('shdr-open');
           control.setAttribute('aria-expanded', String(open));
           items.filter((item) => item !== li).forEach(closeItem);
         });

@@ -370,10 +370,9 @@ gsap.to('.split-content-2', { opacity:1, y:0, duration:0.8, delay: 0.2,
   scrollTrigger: { trigger: '.split-media-2', start: 'top 75%' }
 });
 </script>
-<script src="assets/header-config.js?v=20260622-1"></script>
+<script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
 
 
 

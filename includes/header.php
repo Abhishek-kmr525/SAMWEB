@@ -318,6 +318,9 @@ body {
     max-width: 100%;
     border-radius: 18px;
     padding: 4px 6px;
+    max-height: calc(100vh - 92px);
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
   }
 
   #shdr-root.shdr-menu-open .nav-pill {
@@ -345,13 +348,22 @@ body {
   #shdr-root .dropdown {
     position: static !important;
     display: none;
+    transform: none !important;
     margin-top: 6px;
     box-shadow: none;
     border-radius: 16px;
     min-width: 0;
     padding: 8px !important;
     width: 100%;
+    max-height: 280px;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
     background: rgba(255, 255, 255, 0.98) !important;
+  }
+
+  #shdr-root .dropdown::before,
+  #shdr-root .sub-dropdown::before {
+    display: none;
   }
 
   #shdr-root .dropdown a,
@@ -363,6 +375,11 @@ body {
   #shdr-root .dropdown a:hover,
   #shdr-root .sub-dropdown a:hover {
     background: rgba(0, 0, 0, 0.06);
+  }
+
+  #shdr-root .nav-links > li:hover > .dropdown,
+  #shdr-root .nav-links > li:focus-within > .dropdown {
+    display: none;
   }
 
   #shdr-root .nav-links > li.shdr-open > .dropdown {
