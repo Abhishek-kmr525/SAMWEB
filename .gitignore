@@ -1,0 +1,13 @@
+.DS_Store
+.deploy.env
+includes/app-config.php
+storage/*.sqlite
+storage/*.sqlite-*
+tmp/
+backups/
+adminpanel-local/
+samrecover.com/
+server-latest/
+Archive.zip
+deploy_ftp.py
+XAU_MultiStrategy_Master_EA_V2_TEST.mq5
