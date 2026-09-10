@@ -60,7 +60,6 @@ rsync -a \
   --exclude='.deploy.env.example' \
   --exclude='deploy.sh' \
   --exclude='DEPLOYMENT.md' \
-  --exclude='deploy_ftp.py' \
   --exclude='includes/app-config.php' \
   --exclude='storage/' \
   --exclude='tmp/' \
