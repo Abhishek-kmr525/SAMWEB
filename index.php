@@ -1080,9 +1080,9 @@
       <div class="hero-copy" id="heroLeft">
         <div class="eyebrow">Global Medical Innovation Award Winner</div>
         <h1 class="hero-title">
-          The prescription<br />
-          that replaces<br />
-          <span>pain medication.</span>
+          Sustained Acoustic Medicine<br />
+          for Soft Tissue Injury and<br />
+          <span>Chronic Joint Pain</span>
         </h1>
         <p>
           sam&reg; (Sustained Acoustic Medicine) is an FDA-cleared, drug-free wearable ultrasound therapy - clinically
