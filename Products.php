@@ -504,7 +504,8 @@
         <article class="product-card">
           <div class="product-media">
             <div class="product-badge">Established platform</div>
-            <img src="assets/products/SAM_2.0_Hero.png" alt="sam 2.0 wearable ultrasound therapy device"/>
+            <img src="assets/products/sam-2-hero-1200.webp" width="1200" height="801" loading="lazy" decoding="async"
+              alt="sam 2.0 wearable ultrasound therapy device"/>
           </div>
           <div class="product-body">
             <div class="product-kicker">sam&reg; 2.0</div>

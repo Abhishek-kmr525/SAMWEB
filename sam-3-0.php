@@ -1597,7 +1597,7 @@
         </div>
         <div class="product-stage">
           <div class="image-frame">
-            <video autoplay muted loop playsinline>
+            <video autoplay muted loop playsinline preload="metadata">
               <source src="assets/02-SamSport-2025_SOR-WBA_30s-01A.mp4" type="video/mp4" />
             </video>
           </div>
@@ -1632,8 +1632,9 @@
     <!-- <section class="section" style="padding-top:0; padding-bottom: 80px;">
     <div class="inner">
       <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.18); background: var(--ink);">
-        <video autoplay muted loop playsinline style="width:100%; display:block; max-height:560px; object-fit:cover;">
-          <source src="assets/02-SamSport-2025_SOR-WBA_30s-01A.mp4" type="video/mp4"/>
+        <video class="lazy-video" muted loop playsinline preload="none" poster="assets/videos/sam-sport-poster.jpg"
+          style="width:100%; display:block; max-height:560px; object-fit:cover;">
+          <source data-src="assets/02-SamSport-2025_SOR-WBA_30s-01A.mp4" type="video/mp4"/>
         </video>
       </div>
     </div>
@@ -1721,7 +1722,8 @@
       <div class="inner therapy-layout">
         <div class="therapy-visual" aria-hidden="true">
           <div class="therapy-plate">
-            <img src="assets/Sam_3.0_Close-Up.png" alt="sam&reg; 3.0 close-up" />
+            <img src="assets/sam-3-close-up-1280.webp" width="1280" height="720" loading="lazy" decoding="async"
+              alt="sam&reg; 3.0 close-up" />
           </div>
         </div>
         <div>
@@ -1858,6 +1860,7 @@
       }
     }
   </script>
+  <script src="assets/lazy-video.js" defer></script>
   <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 

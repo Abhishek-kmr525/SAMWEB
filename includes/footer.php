@@ -236,7 +236,7 @@
   }
 </style>
 <footer>
-    <div class="footer-logo"><img src="samlogo.png"
+    <div class="footer-logo"><img src="samlogo.png" width="140" height="56" loading="lazy" decoding="async"
         alt="sam&reg;" /></div>
     <div class="footer-copy">&copy; 2026 sam&reg; Products, ZetrOZ Systems LLC | Trumbull, CT | 888-202-9831</div>
     <div class="footer-links">

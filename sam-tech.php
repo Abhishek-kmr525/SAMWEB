@@ -683,8 +683,8 @@
             <div class="vpc-title">daily home ultrasound therapy</div>
           </div>
           <div class="vpc-media">
-            <video autoplay muted loop playsinline>
-              <source src="https://pub-ce72dd6475514908a6d97cfa33c7af95.r2.dev/sam%20technology.mp4" type="video/mp4"/>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/sam-technology-720p.mp4" type="video/mp4"/>
             </video>
           </div>
           <div class="vpc-footer">
@@ -790,8 +790,9 @@
         </p>
       </div>
       <div class="video-card reveal">
-        <video autoplay muted loop playsinline poster="https://samrecover.com/wp-content/uploads/2021/01/Sam_Headers_Tech_2-1024x379-1.jpg">
-          <source src="https://pub-ce72dd6475514908a6d97cfa33c7af95.r2.dev/sam%20technology%202.0.mp4" type="video/mp4"/>
+        <video class="lazy-video" muted loop playsinline preload="none"
+          poster="assets/videos/sam-technology-2-poster.jpg">
+          <source data-src="assets/videos/sam-technology-2-720p.mp4" type="video/mp4"/>
         </video>
         <div class="video-caption">
           <div>
@@ -962,11 +963,10 @@
     });
   }
 </script>
-<script src="assets/header-config.js?v=20260911-1"></script>
+  <script src="assets/lazy-video.js" defer></script>
+  <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
-
 
 
 

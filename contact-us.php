@@ -1732,8 +1732,8 @@
   <main class="contact-page">
     <section class="contact-hero reveal">
       <!-- Background video -->
-      <video class="contact-hero-video" autoplay muted loop playsinline aria-hidden="true">
-        <source src="https://pub-ce72dd6475514908a6d97cfa33c7af95.r2.dev/sam%20technology%202.0.mp4" type="video/mp4" />
+      <video class="contact-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/videos/sam-technology-2-720p.mp4" type="video/mp4" />
       </video>
       <div class="contact-hero-content">
         <div

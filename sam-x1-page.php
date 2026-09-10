@@ -762,8 +762,8 @@
       </div>
       <div class="product-stage">
         <div class="video-frame">
-          <video autoplay muted loop playsinline>
-            <source src="https://pub-ce72dd6475514908a6d97cfa33c7af95.r2.dev/sam%20x1.mp4" type="video/mp4"/>
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/videos/sam-x1-720p.mp4" type="video/mp4"/>
           </video>
         </div>
         <div class="device-tag">
@@ -930,7 +930,6 @@
 <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
 
 
 

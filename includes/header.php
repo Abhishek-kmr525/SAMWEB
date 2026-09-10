@@ -396,7 +396,7 @@ body {
 
 <header id="shdr-root">
   <a href="index.php" class="header-logo">
-    <img src="samlogo.png" alt="sam" />
+    <img src="samlogo.png" width="140" height="56" decoding="async" alt="sam" />
   </a>
   <button class="shdr-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-shdr-mobile-toggle>☰</button>
   <nav class="nav-pill" aria-label="Primary navigation">

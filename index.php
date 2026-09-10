@@ -1100,7 +1100,7 @@
       </div>
       <div class="product-stage" id="heroRight">
         <div class="video-frame">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop playsinline preload="metadata">
             <source src="assets/videos/01-SAM_HP_ProdFam-01A.mp4" type="video/mp4" />
           </video>
         </div>
@@ -1206,8 +1206,10 @@
       <div class="clinical-image" id="clinicalImage">
         <div class="clinical-image-wrapper">
           <div class="clinical-img-wrap">
-            <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
-              <source src="https://pub-ce72dd6475514908a6d97cfa33c7af95.r2.dev/Work.mp4" type="video/mp4">
+            <video class="lazy-video" loop muted playsinline preload="none"
+              poster="assets/videos/work-clinical-poster.jpg"
+              style="width: 100%; height: 100%; object-fit: cover;">
+              <source data-src="assets/videos/work-clinical-720p.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -1248,7 +1250,7 @@
       <div class="usecases-grid">
         <div class="usecase-card">
           <div class="usecase-img">
-            <img src="knee_runner.png"
+            <img src="assets/knee-runner-1200.webp" width="1200" height="800" loading="lazy" decoding="async"
               alt="Sports injury" />
           </div>
           <div class="usecase-body">
@@ -1260,7 +1262,7 @@
         </div>
         <div class="usecase-card">
           <div class="usecase-img">
-            <img src="assets/Sam_3.0_Close-Up.png"
+            <img src="assets/sam-3-close-up-1280.webp" width="1280" height="720" loading="lazy" decoding="async"
               alt="Chronic pain" />
           </div>
           <div class="usecase-body">
@@ -1272,7 +1274,8 @@
         </div>
         <div class="usecase-card">
           <div class="usecase-img">
-            <img src="assets/products/SAM_2.0_Hero.png" alt="Soft tissue" />
+            <img src="assets/products/sam-2-hero-1200.webp" width="1200" height="801" loading="lazy" decoding="async"
+              alt="Soft tissue" />
           </div>
           <div class="usecase-body">
             <div class="usecase-tag">Post-Operative Recovery</div>
@@ -1386,6 +1389,7 @@
       });
     });
   </script>
+  <script src="assets/lazy-video.js" defer></script>
   <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 
