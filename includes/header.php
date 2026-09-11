@@ -69,7 +69,8 @@ body {
 
 #shdr-root .header-logo img {
   display: block;
-  height: 56px;
+  width: 140px;
+  height: auto;
   max-width: 100%;
 }
 
@@ -302,7 +303,8 @@ body {
   }
 
   #shdr-root .header-logo img {
-    height: 34px;
+    width: 110px;
+    height: auto;
   }
 
   #shdr-root .shdr-toggle {

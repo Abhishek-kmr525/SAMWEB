@@ -12,7 +12,8 @@
   }
 
   .footer-logo img {
-    height: 30px;
+    width: 140px;
+    height: auto;
     display: block;
     opacity: 0.7;
     max-width: 100%;
