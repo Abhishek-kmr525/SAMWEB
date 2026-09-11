@@ -1733,6 +1733,7 @@
     <section class="contact-hero reveal">
       <!-- Background video -->
       <video class="contact-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/videos/sam-technology-2-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
         <source src="assets/videos/sam-technology-2-720p.mp4" type="video/mp4" />
       </video>
       <div class="contact-hero-content">

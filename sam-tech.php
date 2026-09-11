@@ -684,6 +684,7 @@
           </div>
           <div class="vpc-media">
             <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/sam-technology-mobile.mp4" media="(max-width: 767px)" type="video/mp4"/>
               <source src="assets/videos/sam-technology-720p.mp4" type="video/mp4"/>
             </video>
           </div>
@@ -792,6 +793,7 @@
       <div class="video-card reveal">
         <video class="lazy-video" muted loop playsinline preload="none"
           poster="assets/videos/sam-technology-2-poster.jpg">
+          <source data-src="assets/videos/sam-technology-2-mobile.mp4" media="(max-width: 767px)" type="video/mp4"/>
           <source data-src="assets/videos/sam-technology-2-720p.mp4" type="video/mp4"/>
         </video>
         <div class="video-caption">
@@ -967,7 +969,6 @@
   <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
 
 
 

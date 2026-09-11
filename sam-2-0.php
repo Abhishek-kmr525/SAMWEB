@@ -930,6 +930,7 @@
       <div class="product-stage">
         <div class="image-frame" style="aspect-ratio: 16/10; overflow: hidden;">
           <video autoplay muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <source src="assets/videos/sam-2-mobile.mp4" media="(max-width: 767px)" type="video/mp4"/>
             <source src="assets/videos/02-SAM_PP_Prod20-01A.mp4" type="video/mp4"/>
           </video>
         </div>

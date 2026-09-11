@@ -1101,6 +1101,7 @@
       <div class="product-stage" id="heroRight">
         <div class="video-frame">
           <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/videos/01-SAM_HP_ProdFam-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
             <source src="assets/videos/01-SAM_HP_ProdFam-01A.mp4" type="video/mp4" />
           </video>
         </div>
@@ -1209,6 +1210,7 @@
             <video class="lazy-video" loop muted playsinline preload="none"
               poster="assets/videos/work-clinical-poster.jpg"
               style="width: 100%; height: 100%; object-fit: cover;">
+              <source data-src="assets/videos/work-clinical-mobile.mp4" media="(max-width: 767px)" type="video/mp4">
               <source data-src="assets/videos/work-clinical-720p.mp4" type="video/mp4">
             </video>
           </div>

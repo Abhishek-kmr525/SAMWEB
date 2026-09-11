@@ -763,6 +763,7 @@
       <div class="product-stage">
         <div class="video-frame">
           <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/videos/sam-x1-mobile.mp4" media="(max-width: 767px)" type="video/mp4"/>
             <source src="assets/videos/sam-x1-720p.mp4" type="video/mp4"/>
           </video>
         </div>
@@ -930,7 +931,6 @@
 <script src="assets/header-config.js?v=20260911-1"></script>
 </body>
 </html>
-
 
 
 

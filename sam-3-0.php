@@ -1598,6 +1598,7 @@
         <div class="product-stage">
           <div class="image-frame">
             <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/sam-sport-mobile.mp4" media="(max-width: 767px)" type="video/mp4" />
               <source src="assets/02-SamSport-2025_SOR-WBA_30s-01A.mp4" type="video/mp4" />
             </video>
           </div>
@@ -1634,6 +1635,7 @@
       <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.18); background: var(--ink);">
         <video class="lazy-video" muted loop playsinline preload="none" poster="assets/videos/sam-sport-poster.jpg"
           style="width:100%; display:block; max-height:560px; object-fit:cover;">
+          <source data-src="assets/videos/sam-sport-mobile.mp4" media="(max-width: 767px)" type="video/mp4"/>
           <source data-src="assets/02-SamSport-2025_SOR-WBA_30s-01A.mp4" type="video/mp4"/>
         </video>
       </div>
