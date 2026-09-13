@@ -1061,8 +1061,178 @@
     }
 
     @media (max-width: 760px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+      }
+
+      .product-hero {
+        min-height: auto;
+        padding: 72px 14px 14px;
+        display: block;
+      }
+
+      .hero-shell {
+        width: 100%;
+        gap: 12px;
+      }
+
+      .eyebrow {
+        max-width: 100%;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        font-size: 8px;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-title {
+        margin-bottom: 10px;
+        font-size: clamp(28px, 8.4vw, 34px);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+      }
+
+      .hero-title br {
+        display: none;
+      }
+
+      .hero-copy p {
+        margin-bottom: 12px;
+        max-width: none;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-actions .btn-primary,
+      .hero-actions .btn-outline {
+        width: 100%;
+        min-height: 36px;
+        padding: 7px 6px;
+        font-size: 10px;
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      .eou-box {
+        width: 52px;
+        height: 42px;
+      }
+
+      .eou-box img {
+        width: auto;
+        max-width: 52px;
+        max-height: 42px;
+      }
+
+      .product-stage {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .video-frame {
+        width: 100%;
+        border-width: 4px;
+        border-radius: 16px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .device-tag {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: auto;
+        margin: 0;
+        padding: 7px 9px;
+        border-radius: 9px;
+      }
+
+      .device-tag strong {
+        font-size: 17px;
+      }
+
+      .device-tag span {
+        margin-top: 3px;
+        font-size: 8px;
+      }
+
       .spec-strip {
-        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .spec-item {
+        min-width: 0;
+        min-height: 54px;
+        padding: 7px 5px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .spec-item b {
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 4px;
+        font-size: 17px;
+      }
+
+      .spec-item b::before {
+        width: 3px;
+        height: 14px;
+      }
+
+      .spec-item small {
+        font-size: 8px;
+        line-height: 1.2;
+        letter-spacing: 0.025em;
+      }
+
+      .trust-bar {
+        padding: 9px 14px;
+      }
+
+      .trust-bar-inner {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+      }
+
+      .trust-item {
+        min-width: 0;
+        max-width: none;
+        padding: 9px 10px;
+        border-radius: 10px;
+        transform: none;
+      }
+
+      .trust-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .trust-item-text {
+        margin-bottom: 1px;
+        font-size: 10px;
+      }
+
+      .trust-item-sub {
+        font-size: 8px;
+        line-height: 1.25;
+      }
+
+      .clinical-image {
+        max-width: 100%;
+        transform: none;
       }
     }
   </style>

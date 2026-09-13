@@ -209,7 +209,16 @@
     }
 
     .footer-links {
+      width: 100%;
+      margin-top: 0;
       gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-social-group {
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .footer-shell-divider {
