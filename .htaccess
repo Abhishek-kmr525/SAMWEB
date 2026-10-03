@@ -1,0 +1,4 @@
+# Redirect old WordPress URLs to new PHP pages
+RewriteEngine On
+
+RewriteRule ^patient-resources-2/instructional-videos/?$ /instructional-videos.php [R=301,L]
