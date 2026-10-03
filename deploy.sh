@@ -60,6 +60,7 @@ rsync -a \
   --exclude='.deploy.env.example' \
   --exclude='deploy.sh' \
   --exclude='DEPLOYMENT.md' \
+  --exclude='GITHUB_CPANEL_DEPLOYMENT_HANDOVER.md' \
   --exclude='includes/app-config.php' \
   --exclude='storage/' \
   --exclude='tmp/' \
