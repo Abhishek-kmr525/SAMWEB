@@ -1,2 +1,4 @@
+# SAM Recover Deploy Test
 User-agent: *
 Allow: /
+# deploy-test-token: cadnow-2026-10-03
