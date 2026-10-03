@@ -49,13 +49,20 @@ password manager or another approved secure channel.
 ### Current Local GitHub Access Status
 
 The local repository is configured to use an SSH key named
-`id_ed25519_samweb`. No GitHub personal access token is stored in this project.
-At the time of this handover, a non-interactive GitHub SSH authentication test
-was rejected. Before the next local push, restore that key's access to the
-GitHub account/repository or create and authorize a replacement SSH key.
+`id_ed25519_samweb` through a repository-specific SSH command. No GitHub
+personal access token is stored in this project. A `git push origin main` using
+that configuration has been confirmed successfully.
 
-This is a GitHub authorization issue, not a reason to copy a private key or
-token into the repository.
+Use this command to test the repository's actual GitHub access because it
+honors the repository-specific SSH key configuration:
+
+```bash
+git ls-remote origin
+```
+
+A generic `ssh -T git@github.com` command may use a different default SSH key
+and is not a reliable test for this repository unless the same identity file is
+specified explicitly.
 
 ## One-Time cPanel Setup
 
@@ -184,7 +191,6 @@ git push origin main
 Before the first push from a workstation, verify GitHub SSH authorization:
 
 ```bash
-ssh -T git@github.com
 git ls-remote origin
 ```
 
